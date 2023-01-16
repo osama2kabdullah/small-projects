@@ -1,0 +1,118 @@
+button {
+    width: 100%;
+    font-size: large
+}
+
+a.email-2 {
+    display: none;
+}
+
+.logo {
+    font-size: xx-large
+}
+
+.photo-write {
+    width: 70%
+}
+
+.follow-images {
+    display: grid;
+    grid-gap: .5em;
+    grid-template-columns: auto auto
+}
+
+.image-2 {
+    display: none
+}
+
+.image-5 {
+    display: none
+}
+
+.image-6 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2
+}
+
+#footer {
+    flex-direction: column-reverse;
+    text-align: center
+}
+
+.ft-2 {
+    width: 90%;
+    margin: 1em
+}
+
+.ft-1 {
+    width: 90%;
+    margin: 1em
+}
+
+.name {
+    grid-column: 1/3
+}
+
+.form button {
+    grid-column: 1/3
+}
+
+.form {
+    padding: 2em
+}
+
+.form input {
+    padding: .7em
+}
+
+.number-email p a {
+    font-size: 1.1rem
+}
+
+#about-head img {
+    width: 100%
+}
+
+.skills {
+    grid-template-columns: none
+}
+
+.skill-box-2 {
+    border-right: none;
+    border-left: none
+}
+
+.skill-box-2 {
+    border-top: 1px solid #b9b9b9;
+    border-bottom: 1px solid #b9b9b9
+}
+
+.skill-p {
+    width: 95%
+}
+
+.resume-head-text-wrapper {
+    grid-template-columns: none
+}
+
+.resume-head {
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.resume-head a {
+    width: 100%
+}
+
+/*service section*/
+.service-box {
+    flex-direction: row;
+}
+
+.service-boxes {
+    grid-template-columns: none;
+}
+
+/*service section*/

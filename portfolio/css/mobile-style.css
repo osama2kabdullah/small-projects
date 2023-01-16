@@ -1,0 +1,7 @@
+h1{font-size:2rem}
+.photo-write{width:100%}
+.gallary-head h1{text-align:center}
+.number-email{display:flex;align-items:center;flex-direction:column}
+.service-box {
+    flex-direction: column;
+}

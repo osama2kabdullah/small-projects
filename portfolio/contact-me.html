@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Me | Osama</title>
+
+    <!--logo font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+    <!--nav and email font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@500&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd37335466.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <!--laptop-->
+    <link rel="stylesheet" media="screen and (max-width: 990px)" href="/css/laptop-style.css" />
+    <!--tablet-->
+    <link rel="stylesheet" media="screen and (max-width: 770px)" href="/css/tablet-style.css" />
+    <!--mobile-->
+    <link rel="stylesheet" media="screen and (max-width: 650px)" href="/css/mobile-style.css" />
+</head>
+
+<body>
+    
+    <!--head start-->
+    <header id="header-area">
+        <!-- site-navbar start -->
+        <div class="navbar-area">
+            <div class="container">
+                <nav class="site-navbar">
+                    <!-- site logo -->
+                    <div class="logo" style="font-family: 'Merienda', cursive;">
+                        <a href="index.html"><i class="fa-solid fa-face-smile"></i> Osama</a>
+                    </div>
+
+                    <!-- site menu/nav -->
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="#">portfolio</a></li>
+                    </ul>
+                  
+                  
+                    <!-- nav-toggler for mobile version only -->
+                    <div style="display:flex;align-items:center;"><a style="margin-right:1.5em;"class="email-2" href="mailto:someone@yoursite.com"><i class="fa-solid fa-envelope"></i> osama2kabdullah@gmail.com</a><button style="width:auto;"class="nav-toggler">
+                        <i class="fa-solid fa-bars"></i>
+                    </button></div>
+                    <a class="email-1" href="mailto:someone@yoursite.com"><i class="fa-solid fa-envelope"></i> osama2kabdullah@gmail.com</a>
+                </nav>
+            </div>
+        </div><!-- navbar-area end -->
+
+
+    </header>
+    <!--head end-->
+    
+    <section id="contact-form">
+        <h1>Contact me</h1>
+        <p>Hey, to contact me for fix your website problem. kindly fill out the form bellow. And send me your message. I will try my best for fix your problem.</p>
+        
+        <form name="submit-to-google-sheet" class="form">
+            <div class="name"><b>Name</b><input type="text" name="Name" placeholder="Full Name"/></div>
+            <div class="name"><b>Email Address<span style="color: red;">*</span></b><input type="email" name="Email" required placeholder="name@example.com"/></div>
+            <div class="name"><b>Phone</b><input type="tel" name="Phone"placeholder="01********"/></div>
+            <div class="name"><b>Subject</b><input type="text" name="Subject" placeholder="Ex. New Project"/></div>
+            <div class="textarea"><b>Message<span style="color: red;">*</span></b><textarea name="Message" required placeholder="Please write your message..."></textarea></div>
+            <button type="submit"><b>Send Message</b></button><span id="msg" style="margin-top:2em; color:green; font-size: 1rem; width:max-content;"></span>
+        </form>
+        
+        <div class="number-email">
+            <p><a href="mailto:someone@yoursite.com"><i class="fa-solid fa-envelope"></i> osama2kabdullah@gmail.com</a></p>
+            <p><a href="tel: 01913466008"><i class="fa-solid fa-phone"></i> (880+) 1913 466008 </a></p>
+        </div>
+        
+    </section>
+    
+    <!--footer start-->
+    <section id="footer">
+        <div class="ft-1">
+            <div class="ft-about" style="font-family: 'Merienda', cursive;">
+                <i class="fa-solid fa-face-smile"></i> Osama
+            </div>
+            <p>I am so lazy. And I am an Introvert, So I cannot properly describe about me. I love travelling but I
+                can't, Becouse I hove not enough mony for travelling, Ha Ha Ha.</p>
+            <p>
+                <a target="_blank" href="https://www.facebook.com/osama.abdullah.201673"><i class="fa-brands fa-facebook"></i></a>
+                <a target="_blank" href="https://wa.me/01635307889"><i class="fa-brands fa-whatsapp-square"></i></a>
+                <a target="_blank" href="https://github.com/osama2kabdullah/osama-abdullah.github.io"><i class="fa-brands fa-github"></i></a>
+            </p>
+        </div>
+        <div class="ft-2">
+            <h3>Contact me</h3>
+            <p><a href="mailto:someone@yoursite.com"><i class="fa-solid fa-envelope"></i> osama2kabdullah@gmail.com</a></p>
+            <p><a href="tel: 01913466008"><i class="fa-solid fa-phone"></i> (880+) 1913 466008 </a></p>
+        </div>
+    </section>
+    <footer id="last-f">
+        <p>Copyright © Osama | Designed by Osama Abdullah</p>
+    </footer>
+    <!--footer start-->
+    
+    
+    <script src="app.js"></script>
+    
+</body>
+
+</html>

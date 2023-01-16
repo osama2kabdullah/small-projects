@@ -1,0 +1,165 @@
+button {
+    font-size: large
+}
+
+h1 {
+    font-size: 2.5rem
+}
+
+.nav-toggler {
+    display: block;
+  }
+
+  .nav-toggler i {
+    color: black;
+    font-size: xx-large;
+  }
+
+  a.email-2:hover {
+    color: #807d7d
+  }
+
+  a.email-1 {
+    display: none;
+  }
+
+  a.email-2 {
+    font-family: Quicksand, sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    color: #000;
+    font-size: 1.22rem;
+    transition: .3s;
+    display: block;
+  }
+
+  .site-navbar {
+    min-height: 60px;
+    justify-content: space-between;
+  }
+
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 17vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s;
+  }
+
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-navbar ul li a {
+    padding: 25px;
+  }
+
+  .site-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, .1);
+  }
+
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+
+  .intro-area h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  /*head end*/
+
+#re-write {
+    flex-direction: column
+}
+
+.text-write {
+    text-align: center
+}
+
+.photo-write {
+    width: 70%
+}
+
+#about {
+    flex-direction: column-reverse
+}
+
+.gallary-images {
+    grid-template-columns: none
+}
+
+.gallary-head {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.gallary-head button {
+    display: none
+}
+
+.btn {
+    display: block;
+    text-align: center
+}
+
+#contact-form {
+    width: 90%
+}
+
+.form {
+    padding: 3em;
+    border-radius: 1em
+}
+
+#about-head {
+    grid-template-columns: none;
+    grid-gap: 1em;
+    grid-template-rows: auto auto;
+    align-items: center
+}
+
+#about-head img {
+    margin: auto
+}
+
+.about-head-text {
+    grid-row-start: 1
+}
+
+#about-story {
+    flex-direction: column
+}
+
+.about-text {
+    width: 100%
+}
+
+.about-image {
+    width: 100%
+}
+
+.skill-p {
+    width: 70%
+}
+
+.resume-head-h1 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column
+}
+
+/*service section*/
+.service-box {
+    flex-direction: column;
+}
+
+/*service section*/

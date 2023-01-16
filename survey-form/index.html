@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="build-a-survey-form.css">
+	<title>Survey Form</title>
+</head>
+<body>
+	
+<main>
+
+<h1 style="text-align:center" id="title">The form</h1>
+<p style="text-align:center" id="description">Thank you for taking the time to help us improve the platform</p>
+
+<form id="survey-form">
+
+<div>
+<label id="name-label">Name</label><br><input placeholder="name" id="name" type="text" required/></div>
+
+<div><label id="email-label">Email</label><br><input placeholder="email" id="email" type="email" required/></div>
+
+<div>
+<label id="number-label">Age</label><br><input placeholder="number" id="number" min="12" max="120" type="number" required/>
+</div>
+
+<div class="slect">
+	<label>Which option best describes your current role?</label><br>
+	<select id="dropdown">
+  <option>osama</option>
+  <option>osama</option>
+</select>
+</div>
+
+<div class="radioBtnDiv">
+	<label style="font-size:large; font-weight: bold">Would you recommend freeCodeCamp to a friend?</label><br>
+<input value="nam" type="radio" name="radi"/> <label>osama</label> <br>
+<input value="nAm" type="radio" name="radi"/> <label>osama</label> <br>
+<input value="naM" type="radio" name="radi"/> <label>osama</label> <br>
+</div>
+
+<div>
+	<label>What is your favorite feature of freeCodeCamp?</label><br>
+	<select id="dropdown">
+  <option>osama</option>
+  <option>osama</option>
+</select>
+</div>
+
+<div class="multplBtn">
+	<label style="font-size:large; font-weight: bold">What would you like to see improved?</label><br>
+	<input type="checkbox" value="num"/><label>osama</label> <br>
+<input type="checkbox" value="nUm"/><label>osama</label> <br>
+<input type="checkbox" value="Num"/><label>osama</label> <br>
+</div>
+
+<div><label>Any comments or suggestions?</label><br>
+	<textarea placeholder="comment"></textarea></div>
+
+<button id="submit">submit</button>
+
+</form>
+
+</main>
+</body>
+</html>

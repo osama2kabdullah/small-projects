@@ -1,0 +1,118 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: arial;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFE67C;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+}
+#header-img {
+  width: 120px;
+}
+#nav-bar {
+  display: flex;
+  gap: 2em;
+}
+.nav-link {
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+  text-decoration: none;
+  color: green;
+}
+#video {
+  max-width: 100%;
+  border-radius: 7px;
+  width: 960;
+}
+h1 {
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+  color: green;
+  text-align: center; 
+  margin: 1em 0;
+  font-size: 4rem;
+}
+#map {
+  max-width: 100%;
+}
+.fa-brands {
+  background: green;
+  color: #fff;
+  border-radius: 2px;
+  padding: .3em;
+  margin: 0 1em;
+  font-size: 1.1rem;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  margin: 3em;
+}
+#form {
+display: grid;
+grid-gap: 1em;
+}
+#email {
+  padding: 1em;
+  
+  border: 1px solid green;
+}
+#submit {
+  padding: 1em;
+  border: none;
+  outline: none;
+  background: green;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+}
+#submit:active {
+  background: #333;
+}
+
+
+
+
+@media screen and (max-width:746px){
+  #video {
+    max-width: 80%;
+    height: 250;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #map {
+  max-width: 100%;
+  height: auto;
+}
+footer {
+  flex-direction: column-reverse;
+  margin: 1em;
+  margin-top: 5em;
+}
+}
+
+@media screen and (max-width: 425px){
+  #video {
+    max-width: 80%;
+    height: 180;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  #map {
+  max-width: 90%;
+  height: auto;
+}
+}
