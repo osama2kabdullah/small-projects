@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - osama</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            height: 2em;
+            width: 2em;
+            font-size: 2rem;
+        }
+        #bord {
+            padding: .3em;
+            font-size: 2rem;
+            width: 56.5%;
+        }
+        .bord {
+            font-weight: bold;
+            padding: .3em 0;
+            font-size: 2rem;
+            width: 56.5%;
+        }
+        .main-div {
+            width: fit-content;
+            margin: 5em 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-div">
+        <div class="bord">= <span id="spanBord"></span></div>
+        <input id="bord" disabled></input>
+        
+        <div><button id="clear">C</button><button style="color: transparent">.</button><button style="color: transparent">.</button><button style="color: transparent">X</button></div>
+        
+        <div><button class="Number">7</button><button class="Number">8</button><button class="Number">9</button><button class="Number">*</button></div>
+        
+        <div><button class="Number">4</button><button class="Number">5</button><button class="Number">6</button><button class="Number">-</button></div>
+        
+        <div><button class="Number">1</button><button class="Number">2</button><button class="Number">3</button><button class="Number">+</button></div>
+        
+        <div><button class="Number">.</button><button class="Number">0</button><button class="Number">/</button><button id="equal">=</button></div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>

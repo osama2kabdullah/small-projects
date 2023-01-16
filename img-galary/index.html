@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image-Gallary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <style>
+        .gallary {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: auto auto auto auto;
+            width: 30em;
+            margin: 12vh 0;
+            grid-gap: 1em;
+        }
+
+        #gallary {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+        .gallary img:hover {
+            opacity: 1;
+        }
+        .gallary img {
+            width: 100%;
+            height: 100%;
+            border: 1px solid transparent;
+            opacity: 0.5;
+        }
+        
+        .img img {
+            opacity: 1;
+        }
+        .img {
+            grid-column: 2 / 6;
+            grid-row: 1 / 5;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="gallary">
+        <div class="gallary">
+            <img onclick="myFunction(this)" src="images\HALF-07-Black.jpg" alt="">
+            <img onclick="myFunction(this)" src="images\Half-Sleeve-07-Sabr-Patience-White.jpg" alt="">
+            <img onclick="myFunction(this)" src="images\Half-Tshirt-07-Forest.jpg" alt="">
+            <img onclick="myFunction(this)" src="images\Half-Tshirt-07-Navy.jpg" alt="">
+            <div class="img">
+                <img id="fulimage" src="images\Half-Tshirt-07-Navy.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        
+        function myFunction(smallImage){
+            var fullImage = document.getElementById("fulimage");
+            fullImage.src = smallImage.src;
+        }
+        
+    </script>
+</body>
+
+</html>

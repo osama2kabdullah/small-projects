@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping cart</title>
+    <!-- font awsopme  -->
+    <script src="https://kit.fontawesome.com/cd37335466.js" crossorigin="anonymous"></script>
+    <!-- tailwind css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <main class="m-8 ">
+        <h1 class="text-5xl font-sens">My shopping cart</h1>
+        <p class="text-xl camelcase text-red-500 mt-4">To remove product, just double click on product photo.</p>
+        <div id="frst-parent" class="grid gap-4 grid-cols-3 mt-8 text-2xl bg-slate-700 rounded text-gray-50">
+            <img id="img1" class="object-cover p-2 h-50 w-96 rounded" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1658331042-1628030398-hoka-mach-4-ec-162803-1658330983.jpg?crop=1xw:1xh;center,top&resize=480%3A%2A" alt="">
+            <div class=" p-8 ">
+                <h2 class="text-3xl">Mizuno Wave Rider 25</h2>
+                <p class="text-xl mt-2 font-mono">Price: $132.43</p><br>
+                <div class="flex items-center">
+                    <button id="first-minus-btn" class="h-8 bg-neutral-400 w-8 text-center m-2 active:bg-violet-700">-</button>
+                    
+                    <input id="first-input" class="h-8 w-8 outline-none border-none text-slate-900 text-center text-lg"type="text" value="1">
+                    
+                    <button id="first-plus-btn" class="h-8 bg-neutral-400 w-8 text-center m-2 active:bg-violet-700">+</button>
+                </div>
+            </div>
+            <div class=" p-8 flex flex-col text-end">
+                <h2 class="text-2xl font-mono">Total price</h2><br><p class="text-xl font-mono">$<span id="price1">132.43</span></p>
+            </div>
+        </div>
+        <div id="second-parent" class="grid gap-4 grid-cols-3 mt-8 text-2xl bg-slate-700 rounded text-gray-50">
+            <img id="img2" class="object-cover p-2 h-50 w-96 rounded" src="https://media.istockphoto.com/photos/running-shoes-picture-id1249496770?b=1&k=20&m=1249496770&s=170667a&w=0&h=_SUv4odBqZIzcXvdK9rqhPBIenbyBspPFiQOSDRi-RI=" alt="">
+            <div class=" p-8 ">
+                <h2 class="text-3xl">Fabrics Sneaker Shoes</h2>
+                <p class="text-xl mt-2 font-mono">Price: $242.32</p><br>
+                <div class="flex items-center">
+                    <button id="second-minus-btn" class="h-8 bg-neutral-400 w-8 text-center m-2 active:bg-violet-700">-</button>
+                    
+                    <input id="second-input" class="h-8 w-8 outline-none border-none text-slate-900 text-center text-lg"type="text" value="1">
+                    
+                    <button id="second-plus-btn" class="h-8 bg-neutral-400 w-8 text-center m-2 active:bg-violet-700">+</button>
+                </div>
+            </div>
+            <div class=" p-8 flex flex-col text-end">
+                <h2 class="text-2xl font-mono">Total price</h2><br><p class="text-xl font-mono">$<span id="price2">242.32</span></p>
+            </div>
+        </div>
+        
+        <div class="mt-8 p-8 text-2xl bg-slate-700 rounded text-gray-50">
+            <div class="flex gap-8 ">
+                <div>
+                    <h3 class="uppercase text-sky-500 text-2xl font-semibold">Sub Total <span class="font-thin text-2xl font-mono  text-slate-200">$</span><span class=" font-thin font-mono text-2xl text-slate-200" id="sub-total">132.43</span></h3>
+                    
+                    <h3 class="uppercase text-sky-500 text-2xl font-semibold">Tax <span class="font-thin text-2xl font-mono  text-slate-200">$</span><span class=" font-thin font-mono text-2xl text-slate-200" id="tax">11.21</span></h3>
+                    
+                    <h3 class="uppercase text-sky-500 text-2xl font-semibold">Total <span class="font-thin text-2xl font-mono  text-slate-200">$</span><span class=" font-thin font-mono text-2xl text-slate-200" id="total-price">1231.23</span></h3>
+                </div>
+            </div>
+            <div>
+                <button id="check-out" class="rounded-non font-mono e bg-lime-400 text-slate-900 mt-8 p-1 text-base  active:bg-violet-700">Check out</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="shopping-cart.js"></script>
+</body>
+
+</html>

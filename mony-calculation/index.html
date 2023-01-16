@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Expances</title>
+    <!-- tailwind css framwork link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- vanila css  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="text-4xl m-8 text-center">Your Monthly mony calculation</h1>
+    <main class="main">
+        <img class="rounded-xl max-w-full" src="img/kelly-sikkema-3-Tc_5LROrM-unsplash.jpg" alt="">
+        <div class="bg-gray-200 p-4 rounded-xl">
+            
+            <h2 class="text-3xl text-center">Calculate</h2><br>
+            
+            <!-- inputs  -->
+            <p class="text-2xl font-medium inline">Income:</p> <input id="income" class="p-2" type="text"><br><br>
+            <h2 class="text-2xl font-medium underline">Expences</h2>
+            <br>
+            <p class="text-2xl font-medium inline">Food:</p> <input id="food" class="p-2" type="text"><br><br>
+            <p class="text-2xl font-medium inline">Rent:</p> <input  id="rent" class="p-2" type="text"><br><br>
+            <p class="text-2xl font-medium inline">Cloths:</p> <input  id="cloths" class="p-2" type="text"><br><br>
+            
+            <!-- claculate btn  -->
+            <p id="error-message" class="font-medium text-center m-4 text-red-700">Please recheck. we don't allow words, less than 0 numbers and greter than your income amount expances valus</p>
+            <button id="calculate-btn" class=" p-2 rounded font-medium text-xl text-white active:bg-sky-500/50 bg-sky-700">Calculate
+                now</button><br><br>
+            <p class="text-2xl text-center font-medium">Total Expances: <span id="total-expances"></span></p><br>
+            <p class="text-2xl text-center font-medium">Balance: <span id="balance"></span></p><br>
+
+            <!-- save section  -->
+            <div class="text-center">
+                <p class="text-2xl font-medium inline">Save:</p> <input id="parcentage" class="p-2" type="text"><p class="text-2xl font-medium inline"> % </p>
+                <button id="saving-btn" class=" p-2 rounded font-medium text-xl text-white active:bg-sky-500/50 bg-sky-700">save</button><br><br>
+            </div>
+            <p id="error-saving" class="font-medium text-center m-4 text-red-700">Please recheck. we don't allow greter than 100, less than 0 numbers and greter than balance amount parcentage</p>
+            <p class="text-2xl font-medium inline">Saving Amount: <span id="saving-amount"></span></p><br><br>
+            <p class="text-2xl font-medium inline">Reamining balance: <span id="remaining-balance"></span></p>
+        </div>
+    </main>
+
+    <!-- js file added      -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

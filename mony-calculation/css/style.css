@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+.main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 2em;
+    margin: 3em;
+    padding: 1em;
+}
+/* error massages  */
+#error-message {
+    display: none;
+}
+#error-saving {
+    display: none;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .main {
+        display: grid;
+        grid-template-columns: none;
+        grid-gap: 2em;
+        margin: .5em;
+    }
+}

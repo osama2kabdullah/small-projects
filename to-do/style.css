@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@500&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Poppins', sans-serif;
+}
+#header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 5em;
+}
+b {
+    display: block;
+}
+input:focus {
+    border: 1px solid black;
+}
+input {
+    padding: 1em;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid transparent;
+    background: #ddd;
+}
+h2,h1 {
+    text-align: center;
+}
+form {
+    border: 1px solid black;
+    display: grid;
+    padding: 1em;
+}
+#sub:active {
+    background-color: #fff;
+    color: #333;
+}
+#sub {
+    padding: 1em;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight:bolder;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em;
+}
+td, th {
+    border: 1px solid white;
+    padding: 5px;
+}
+thead {
+    background: #333;
+    color: #fff;
+}
+tbody tr:nth-child(even) {
+    background:#ddd;
+}

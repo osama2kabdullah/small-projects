@@ -1,0 +1,79 @@
+body {
+    text-align: center;
+    font-family: arial;
+    margin-top: 3em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+}
+
+main {
+    margin: 3em 4em;
+}
+
+.div2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2em;
+    margin: 5em;
+}
+
+.div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2em;
+}
+
+.div-child {
+    padding: 1em;
+    border-radius: .5em;
+    text-align: left;
+}
+
+.child1 {
+    background: DarkRed;
+}
+
+.child2 {
+    background: DarkMagenta;
+}
+
+.child3 {
+    background: DarkOliveGreen;
+}
+
+input {
+    padding: .2em;
+    font-size: 2rem;
+}
+
+button:active {
+    background-color: #fff;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    padding: .8em;
+    font-size: large;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px){
+    .div {
+        grid-gap: 1em;
+    }
+    main {
+        margin: 3em .3em;
+    }
+    .div2 {
+        margin: 1em;
+    }
+    h2 {
+        font-size:large;
+    }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/cd37335466.js" crossorigin="anonymous"></script>
+
+    <title>Login form</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: arial;
+        }
+
+        #full-page {
+            background: url(https://bbdu.ac.in/wp-content/uploads/2020/02/utkarsh-website-banner-background.jpg);
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-form {
+            padding: 2em;
+            background: white;
+            width: 50vh;
+            height: 70vh;
+        }
+
+        .btn {
+            border-radius: 1em;
+            box-shadow: 0 0 20px 9px #ff61241f;
+            width: fit-content;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .btn button {
+            padding: .5em 2em;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            width: 8em;
+            border-radius: 1em;
+        }
+
+        .social-icon {
+            text-align: center;
+            padding: 1.5em 0;
+            font-size: 1.5rem;
+        }
+
+        .social-icon i {
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            height: 1.4em;
+            width: 1.8em;
+            padding-top: .4em;
+            border-radius: 120px;
+            color: white;
+            margin: .3em;
+        }
+
+        #register {
+            display: grid;
+            grid-gap: 2em;
+
+        }
+
+        #register input:focus {
+            border-bottom: 1px solid rgb(150, 149, 149);
+        }
+
+        #register input {
+            font-size: 1rem;
+            padding: .5em 0;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background: transparent;
+        }
+
+        #register button {
+            width: 70%;
+            margin: auto;
+            padding: 1em;
+            border-radius: 2em;
+            border: none;
+            outline: none;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            font-size: 1rem;
+        }
+        #login {
+            display: grid;
+            grid-gap: 2em;
+
+        }
+
+        #login input:focus {
+            border-bottom: 1px solid rgb(150, 149, 149);
+        }
+
+        #login input {
+            font-size: 1rem;
+            padding: .5em 0;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background: transparent;
+        }
+
+        #login button {
+            width: 70%;
+            margin: auto;
+            padding: 1em;
+            border-radius: 2em;
+            border: none;
+            outline: none;
+            background: linear-gradient(to right, #ff105f, #ffad06);
+            font-size: 1rem;
+        }
+        #register {
+            display: none;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <section id="full-page">
+        <div class="login-form">
+            <div class="btn">
+                <button style="background: linear-gradient(to right, #ff105f, #ffad06)" id="btnB" onclick="loginBtn()">Login</button>
+                <button id="btnC" onclick="registerBtn()">Register</button>
+            </div>
+            <div class="social-icon">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+
+                <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
+            </div>
+            <form id ="login">
+                <input name="fname" type="email" placeholder="Username or Email" />
+                <input name="fname" type="password" placeholder="Inter password" />
+
+                <div>
+                    <input type="checkbox">
+                    <label>Remember Password</label></div>
+                <button onclick="myBtn()" id="lgBtn">Login</button>
+            </form>
+            <form id ="register">
+                <input name="fname" type="text" placeholder="Username" />
+                <input name="fname" type="email" placeholder="Email" />
+                <input name="fname" type="password" placeholder="Inter password" />
+
+                <div>
+                    <input type="checkbox">
+                    <label>I agree to the Terms and Condition</label></div>
+                <button id="rgBtn">Register</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    <script>
+        
+        var registerForm = document.getElementById("register");
+        var loginForm = document.getElementById("login");
+        
+        
+        function registerBtn() {
+                registerForm.style.display = "grid"
+                loginForm.style.display = "none"
+                document.getElementById("btnC").style.background = "linear-gradient(to right, #ff105f, #ffad06)"
+                document.getElementById("btnB").style.background = "transparent"
+                
+                
+        }
+        function loginBtn() {
+                registerForm.style.display = "none"
+                loginForm.style.display = "grid"
+                document.getElementById("btnB").style.background = "linear-gradient(to right, #ff105f, #ffad06)"
+                document.getElementById("btnC").style.background = "transparent"
+        }
+        
+        
+        
+    </script>
+</body>
+
+</html>

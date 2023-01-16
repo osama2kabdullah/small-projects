@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+/* header  */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+body {
+    background-color: aliceblue;
+
+}
+
+input {
+    padding: .5em;
+    width: 40%;
+}
+
+button {
+    padding: .5em;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+/* body  */
+#body {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1.5em;
+    padding: 1em;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    input {
+        width: 60%;
+    }
+    #body {
+        grid-template-columns: none;
+        grid-gap: .5em;
+        padding: 1em;
+    }
+}

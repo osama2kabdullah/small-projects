@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- css  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 style="color: #333;">Baap-Er-<span style="color:DarkMagenta">Bank</span>!!!</h1>
+    <main>
+        <div class="div">
+            <div class="div-child child1">
+                <h3>Deposit</h3>
+                <h1>$<span id="deposit-bord">00</span></h1>
+            </div>
+            <div class="div-child child2">
+                <h3>Withdraw</h3>
+                <h1>$<span id="withdraw-bord">00</span></h1>
+            </div>
+            <div class="div-child child3">
+                <h3>Balance</h3>
+                <h1>$<span id="balance-bord">00</span></h1>
+            </div>
+
+        </div>
+
+        <div class="div2">
+            <div class="div-child child1">
+                <h2>Deposit Amount</h2>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">$</span>
+                    <input id="Deposit-input" type="text" class="form-control" aria-describedby="addon-wrapping">
+                </div><br>
+                <div class="d-grid gap-2 col-6">
+                    <button class="btn btn-secondary" type="button" id="deposit-btn">Deposit</button>
+                </div>
+            </div>
+            <div class="div-child child2">
+                <h2>Withdraw Amount</h2>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">$</span>
+                    <input id="withdraw-input" type="text" class="form-control" aria-describedby="addon-wrapping">
+                </div><br>
+                <div class="d-grid gap-2 col-6">
+                    <button class="btn btn-secondary" type="button" id="withdraw-btn">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
