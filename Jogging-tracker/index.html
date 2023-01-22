@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dyCalendarJS</title>
+        <link href="css/dycalendar.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/custom.css">
+    </head>
+    <body>
+        
+        <div class="some-class">
+            <h1>Jogging tracker</h1>
+            <p><b>Today:</b> <span id='nowDate'></span></p>
+            <button onclick='minusBtn()'><</button>
+            <button  onclick='plusBtn()'>></button>
+            <div class="calendar-container">    
+                <div id="dycalendar-month" class="dycalendar-container">
+                </div>
+            </div>
+        </div>
+        
+        <!-- ----------------------- -->
+
+        <!-- javascript -->
+        <script src="js/dycalendar.min.js"></script>
+        <script src="js/default.js"></script>
+    </body>
+</html>
