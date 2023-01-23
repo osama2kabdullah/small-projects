@@ -20,3 +20,4 @@
 14. the-cocktailDB - https://osama2kabdullah.github.io/small-projects/the-cocktailDB/
 15. to-do - https://osama2kabdullah.github.io/small-projects/to-do/
 16. tribute-page - https://osama2kabdullah.github.io/small-projects/tribute-page/
+17. Jogging Tracker (with express server) - https://osama2kabdullah.github.io/small-projects/Jogging-tracker/
