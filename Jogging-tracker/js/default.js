@@ -1,18 +1,3 @@
-/*!
- * dyCalendar is a JavaScript library for creating Calendar.
- *
- * Author: Yusuf Shakeel
- * https://github.com/yusufshakeel
- *
- * GitHub Link: https://github.com/yusufshakeel/dyCalendarJS
- *
- * MIT license
- * Copyright (c) 2016 Yusuf Shakeel
- *
- * Date: 2014-08-17 sunday
- */
-
-//month calendar
 let body = {
   target: "#dycalendar-month",
   type: "month",
@@ -59,21 +44,36 @@ function changeWeelName(oldNames) {
   }
 }
 
+//load data
+async function loadData() {
+  const { year, month } = body;
+  const res = await fetch(`http://localhost:8080/dates/${year}/${month}`);
+  return res.json();
+}
+
 // after click right arrow or left arrow this wiil genarate a new calendar
-function okGenarate() {
+async function okGenarate() {
   const tdElements = document.querySelectorAll("table td");
-  const arr = [12, 2, 3, 6, 5];
+
   const oldWeekNames = [];
   tdElements.forEach(function (td) {
     const num = parseInt(td.innerHTML);
     if (isNaN(num)) {
       oldWeekNames.push(td);
     }
+  });
+  changeWeelName(oldWeekNames);
+
+  const data = await loadData();
+  const arr = data.map((item) => item.date);
+  console.log({ arr });
+
+  tdElements.forEach(function (td) {
+    const num = parseInt(td.innerHTML);
     if (arr.includes(num)) {
       td.innerHTML = "✅";
     }
   });
-  changeWeelName(oldWeekNames);
 }
 okGenarate();
 
@@ -84,15 +84,30 @@ function defaultBehavior() {
 }
 
 // click today date
-function okToDayDate(){
-     let toDay = document.querySelector(".dycalendar-today-date");
-     if(!toDay){
-          return
-     }
-     toDay.style.cursor = "pointer";
-     toDay.addEventListener("click", function () {
-       toDay.innerHTML = '✅'
-     });
+function okToDayDate() {
+  let toDay = document.querySelector(".dycalendar-today-date");
+  if (!toDay) {
+    return;
+  }
+  toDay.style.cursor = "pointer";
+  toDay.addEventListener("click", function () {
+    const { date, month, year } = body;
+    signToday({ date, month, year });
+    toDay.innerHTML = "✅";
+  });
 }
-okToDayDate()
+okToDayDate();
+
+//assign Today post
+function signToday(body) {
+  fetch("http://localhost:8080/signtoday", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
 // --------------------
