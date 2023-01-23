@@ -47,7 +47,7 @@ function changeWeelName(oldNames) {
 //load data
 async function loadData() {
   const { year, month } = body;
-  const res = await fetch(`http://localhost:8080/dates/${year}/${month}`);
+  const res = await fetch(`https://jogging-server.onrender.com/dates/${year}/${month}`);
   return res.json();
 }
 
@@ -100,7 +100,7 @@ okToDayDate();
 
 //assign Today post
 function signToday(body) {
-  fetch("http://localhost:8080/signtoday", {
+  fetch("https://jogging-server.onrender.com/signtoday", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
