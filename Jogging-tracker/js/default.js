@@ -47,7 +47,7 @@ function changeWeelName(oldNames) {
 //load data
 async function loadData() {
   const { year, month } = body;
-  const res = await fetch(`https://jogging-server.onrender.com/dates/${year}/${month}`);
+  const res = await fetch(`http://localhost:8080/data/${year}/${month}`);
   return res.json();
 }
 
@@ -66,7 +66,6 @@ async function okGenarate() {
 
   const data = await loadData();
   const arr = data.map((item) => item.date);
-  console.log({ arr });
 
   tdElements.forEach(function (td) {
     const num = parseInt(td.innerHTML);
@@ -100,7 +99,8 @@ okToDayDate();
 
 //assign Today post
 function signToday(body) {
-  fetch("https://jogging-server.onrender.com/signtoday", {
+  console.log(JSON.stringify(body));
+  fetch("http://localhost:8080/data", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
