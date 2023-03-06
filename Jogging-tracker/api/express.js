@@ -7,11 +7,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const dataFilePath = (year, month) => path.join(process.cwd(), ".data", `${month}-${year}.json`);
+
 // get all data
 app.get("/data/:year/:month", (req, res) => {
   const { year, month } = req.params;
-  const filename = `${month}-${year}.json`;
-  const filePath = path.join(process.cwd(), ".data", filename);
+  const filePath = dataFilePath(year, month);
 
   // check if file exists
   if (fs.existsSync(filePath)) {
@@ -29,14 +30,52 @@ app.get("/data/:year/:month", (req, res) => {
   }
 });
 
-// add new data
+// delete data for a given year and month
+app.delete("/data/:year/:month/:date", (req, res) => {
+  const { year, month, date } = req.params;
+  const filePath = dataFilePath(year, month);
+
+  // check if file exists, if not return error
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).send({ error: "Data file does not exist." });
+  }
+
+  // read the data from file
+  const data = fs.readFileSync(filePath, "utf-8");
+  let parsedData = JSON.parse(data);
+
+  // find the date of the item to remove
+  const deletingDate = parsedData.findIndex(item => item.date == date);
+
+  // if item not found, return error
+  if (deletingDate === -1) {
+    return res
+      .status(404)
+      .send({ error: `Data for ${month}-${year}-${date} not found.` });
+  }
+
+  // remove the item from the array
+  parsedData.splice(deletingDate, 1);
+
+  // write the updated data
+  fs.writeFile(filePath, JSON.stringify(parsedData), (err) => {
+    if (err) {
+      return res
+        .status(500)
+        .send({ error: `Could not write to ${filePath} file.` });
+    }
+
+    res.send({ message: `Data for ${month}-${year}-${date} deleted successfully.` });
+  });
+});
+
+// add new date
 app.post("/data", (req, res) => {
   const { month, year } = req.body;
-  const filename = `${month}-${year}.json`;
-  const folderPath = path.join(process.cwd(), ".data");
-  const filePath = path.join(folderPath, filename);
+  const filePath = dataFilePath(year, month);
 
   // check if folder exists, if not create it
+  const folderPath = path.dirname(filePath);
   if (!fs.existsSync(folderPath)) {
     fs.mkdirSync(folderPath);
   }
