@@ -1,8 +1,8 @@
 {
-  "name": "api",
-  "version": "1.0.0",
+  "name": "jogging-api",
+  "version": "0.1.0",
   "main": "express.js",
-  "license": "MIT",
+  "license": "ISC",
   "type": "module",
   "scripts": {
     "start": "node --watch express.js"

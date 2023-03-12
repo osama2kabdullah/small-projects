@@ -24,6 +24,9 @@
   "homepage": "https://github.com/osama2kabdullah/small-projects#readme",
   "dependencies": {
     "concurrently": "^7.6.0",
-    "live-server": "^1.2.2"
-  }
+    "live-server": "^1.1.0"
+  },
+  "workspaces": [
+    "api"
+  ]
 }
