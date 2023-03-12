@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "node express.js"
+    "start": "node --watch express.js"
 },
   "dependencies": {
     "cors": "^2.8.5",

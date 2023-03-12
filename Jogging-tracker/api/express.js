@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const dataFilePath = (year, month) => path.join(process.cwd(), ".data", `${month}-${year}.json`);
+const dataFilePath = (year, month) => path.join(process.cwd(), "api/.data", `${month}-${year}.json`);
 
 // get all data
 app.get("/data/:year/:month", (req, res) => {
@@ -103,6 +103,10 @@ app.post("/data", (req, res) => {
     res.send({ message: `Data added successfully in ${filePath}.` });
   });
 });
+
+app.get('/', (req, res)=>{
+  res.status(200).send({message: "server is running"})
+})
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {

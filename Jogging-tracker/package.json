@@ -1,0 +1,29 @@
+{
+  "name": "jogging-tracker",
+  "version": "0.1.0",
+  "description": "this is a simple calander app. where user can track there any specific work that they want to do for evryday",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"live-server --port=3000\" \"node --watch api/express.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osama2kabdullah/small-projects.git"
+  },
+  "keywords": [
+    "\"date\"",
+    "\"tracking\"",
+    "\"calander\""
+  ],
+  "author": "Osama Abdullah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osama2kabdullah/small-projects/issues"
+  },
+  "homepage": "https://github.com/osama2kabdullah/small-projects#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "live-server": "^1.2.2"
+  }
+}
