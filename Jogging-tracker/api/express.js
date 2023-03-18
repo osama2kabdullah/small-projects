@@ -89,6 +89,15 @@ app.post("/data", (req, res) => {
   const data = fs.readFileSync(filePath, "utf-8");
   let parsedData = JSON.parse(data);
 
+  // check if the date already exists in the file
+  const dateExists = parsedData.some((item) => {
+    return item.month === month && item.year === year;
+  });
+
+  if (dateExists) {
+    return res.status(400).send({ error: `Data already exists for ${month}/${year}` });
+  }
+
   // add the new data
   parsedData.push(req.body);
 
