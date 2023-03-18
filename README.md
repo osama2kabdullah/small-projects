@@ -21,3 +21,36 @@
 15. to-do - https://osama2kabdullah.github.io/small-projects/to-do/
 16. tribute-page - https://osama2kabdullah.github.io/small-projects/tribute-page/
 17. Jogging Tracker (with express server) - https://osama2kabdullah.github.io/small-projects/Jogging-tracker/
+
+### Here's a step-by-step guide on how to clone and run your project locally
+
+1. First, make sure that you have Git installed on your computer. If you don't have Git installed, you can download and install it from the official Git website.
+
+2. Open a terminal or command prompt on your computer and navigate to the directory where you want to clone the project.
+
+3. Clone the project from my GitHub repository using the following command:
+```bash
+git clone https://github.com/osama2kabdullah/small-projects.git
+```
+
+4. Once the project is cloned, navigate to the root directory of the project in your terminal or command prompt.
+```bash
+cd small-projects
+```
+
+5. Next, navigate to any project root folder using the command:
+```bash
+cd <folder name>
+```
+
+6. Install the required dependencies for the project by running the following command:
+```bash
+npm install
+```
+
+7. To run project in locally
+```bash
+npm start
+```
+
+8. That's it! You should now be able to see your project running locally.

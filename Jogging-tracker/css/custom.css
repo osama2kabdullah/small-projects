@@ -1,5 +1,16 @@
 .some-class {
-    /* background-color: aqua; */
     width: min-content;
     margin: auto
+}
+#progressBar {
+    width: 100%;
+    height: .5em;
+    border-radius: 10px;
+    display: grid;
+    background-color: #ddd;
+/*    grid-template-columns: 50% 50%;*/
+}
+#progressBar :first-child {
+    background: green;
+    border-radius: 10px;
 }

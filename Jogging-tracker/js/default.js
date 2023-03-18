@@ -65,8 +65,32 @@ async function okGenarate() {
   changeWeelName(oldWeekNames);
 
   const data = await loadData();
-  const arr = data.map((item) => item.date);
 
+// get the last date of this month
+  function getLastDateOfMonth(month, year) {
+  // Set the date to the first day of the next month
+  const date = new Date(year, month + 1, 1);
+  // Subtract one day from the date to get the last day of the given month
+  date.setDate(date.getDate() - 1);
+  // Return the last day of the month
+  return date.getDate();
+}
+
+  // progressbar
+  let totalDayofMonth = new Date().getDate();
+
+  if(body.month !== new Date().getMonth()){
+    // this is not current month
+    totalDayofMonth = getLastDateOfMonth(body.month, body.year);
+  }
+
+  const parcentage = Math.round((data.length / new Date().getDate())*100);
+  document.getElementById("parcentage").innerHTML = `${parcentage}% of ${totalDayofMonth} Days.`;
+
+  document.getElementById("progressBar").style.gridTemplateColumns = `${parcentage}% ${100 - parcentage}%`;
+
+// each date tick mark
+  const arr = data.map((item) => item.date);
   tdElements.forEach(function (td) {
     const num = parseInt(td.innerHTML);
     if (arr.includes(num)) {
