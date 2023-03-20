@@ -71,7 +71,7 @@ app.delete("/data/:year/:month/:date", (req, res) => {
 
 // add new date
 app.post("/data", (req, res) => {
-  const { month, year } = req.body;
+  const { month, year, date } = req.body;
   const filePath = dataFilePath(year, month);
 
   // check if folder exists, if not create it
@@ -91,7 +91,7 @@ app.post("/data", (req, res) => {
 
   // check if the date already exists in the file
   const dateExists = parsedData.some((item) => {
-    return item.month === month && item.year === year;
+    return item.month === month && item.year === year && item.date === date;
   });
 
   if (dateExists) {
