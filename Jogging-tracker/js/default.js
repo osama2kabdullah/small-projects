@@ -84,7 +84,7 @@ async function okGenarate() {
     totalDayofMonth = getLastDateOfMonth(body.month, body.year);
   }
 
-  const parcentage = Math.round((data.length / new Date().getDate())*100);
+  const parcentage = Math.round((data.length / totalDayofMonth)*100);
   document.getElementById("parcentage").innerHTML = `${parcentage}% of ${totalDayofMonth} Days.`;
 
   document.getElementById("progressBar").style.gridTemplateColumns = `${parcentage}% ${100 - parcentage}%`;
